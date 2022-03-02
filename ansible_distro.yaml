@@ -1,0 +1,10 @@
+- hosts: all
+  gather_facts: yes
+  become: false
+  tasks:
+  - name: System details
+    debug: msg="{{ item }}"
+    with_items: 
+    - "{{ ansible_distribution }}"
+
+####check for linux distro if its not in ansible_family
