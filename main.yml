@@ -5,7 +5,7 @@
   become: false
   roles:
     - { role: debian, when: ansible_os_family == "Debian" }  
-    - { role: centos, when: ansible_distribution == "OtherLinux" } ##CHECKS IF DISTRO IS CLOUDLINUX  
+    - { role: centos, when: ansible_distribution == "OtherLinux" } #CHECKS IF DISTRO IS CLOUDLINUX(CPANEL SERVERS) 
     - { role: centos, when: ansible_os_family == "RedHat" }
     - { role: freebsd, when: ansible_os_family == "FreeBSD" }
     - { role: smartos, when: ansible_os_family == "Solaris" and ansible_distribution == "SmartOS" }
